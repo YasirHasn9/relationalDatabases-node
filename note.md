@@ -45,6 +45,10 @@ where columnName = "something"
 and anotherColumnName = "somethingElse"
 
 add a new raw for the database using a quey command INSERT
-
 insert into tableName (columnsNames)
 value (the value of each column)
+
+update the table using the UPDATE command
+update tableName
+set columnName = "something"
+where rawName = "something"
