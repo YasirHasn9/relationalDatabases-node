@@ -18,6 +18,12 @@ limit 10
 
 -- Find all customers that live in London, Madrid, or Brazil
 
+select *
+from Customers
+where city = 'London' 
+or city = "Madrid"
+or Country = "Brazil";
+
 -- Add a customer record for "The Shire", the contact name is "Bilbo Baggins" the address is -"1 Hobbit-Hole" in "Bag End", postal code "111" and the country is "Middle Earth"
 
 -- Update Bilbo Baggins record so that the postal code changes to "11122"

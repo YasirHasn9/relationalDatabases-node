@@ -39,3 +39,11 @@ limit the  number of the raws that we want to get.
 select * from tableName 
 order by columnName desc or asc 
 limit numberOfRaws
+
+
+we can also use a logical request using and and or 
+
+select * from tableName 
+where columnName = "something" 
+and anotherColumnName = "somethingElse"
+
