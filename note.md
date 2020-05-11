@@ -26,3 +26,9 @@ update tableName set columnName = newValue where idOfRaw = number of something
 
 to read and retrieve the data 
 select columnName or * as whole form tableName
+
+
+to get a specific raw using id column of whatever 
+
+select columnName from tableName
+where the rawID or rawName = "something"
