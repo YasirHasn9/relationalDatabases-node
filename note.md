@@ -32,3 +32,10 @@ to get a specific raw using id column of whatever
 
 select columnName from tableName
 where the rawID or rawName = "something"
+
+we have options to select data in descending manners and also 
+limit the  number of the raws that we want to get.
+
+select * from tableName 
+order by columnName desc or asc 
+limit numberOfRaws
