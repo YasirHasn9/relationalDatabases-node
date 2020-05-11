@@ -23,27 +23,28 @@ value ("usa" , "ca" , "Yasir" , "wherever" )
 
 update tableName set columnName = newValue where idOfRaw = number of something
 
+to read and retrieve the data
+select columnName or \* as whole form tableName
 
-to read and retrieve the data 
-select columnName or * as whole form tableName
-
-
-to get a specific raw using id column of whatever 
+to get a specific raw using id column of whatever
 
 select columnName from tableName
 where the rawID or rawName = "something"
 
-we have options to select data in descending manners and also 
-limit the  number of the raws that we want to get.
+we have options to select data in descending manners and also
+limit the number of the raws that we want to get.
 
-select * from tableName 
-order by columnName desc or asc 
+select \* from tableName
+order by columnName desc or asc
 limit numberOfRaws
 
+we can also use a logical request using and and or
 
-we can also use a logical request using and and or 
-
-select * from tableName 
-where columnName = "something" 
+select \* from tableName
+where columnName = "something"
 and anotherColumnName = "somethingElse"
 
+add a new raw for the database using a quey command INSERT
+
+insert into tableName (columnsNames)
+value (the value of each column)
