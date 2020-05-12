@@ -25,4 +25,21 @@ router.post("/", async (req, res, next) => {
     next(err);
   }
 });
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const updatedAccount = await db("accounts")
+      .where({ id: req.params.id })
+      .first();
+
+    if (updatedAccount) {
+      res.json(updatedAccount);
+    } else {
+      res.json({ message: "Not Found" });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
