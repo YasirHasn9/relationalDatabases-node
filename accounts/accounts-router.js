@@ -42,4 +42,20 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+router.put("/:id", async (req, res, next) => {
+  try {
+    const updatedPost = await db("accounts")
+      .where({ id: req.params.id })
+      .update(req.body);
+
+    if (updatedPost) {
+      res.status(201).json(updatedPost);
+    } else {
+      res.status(404).json({ message: "Not found" });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
