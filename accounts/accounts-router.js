@@ -9,4 +9,20 @@ router.get("/", async (req, res, next) => {
     next(err);
   }
 });
+
+router.post("/", async (req, res, next) => {
+  try {
+    const [id] = await db("accounts").insert(req.body);
+    const newPost = await db("accounts")
+      .where({ id })
+      .first();
+    if (newPost) {
+      res.status(201).json(newPost);
+    } else {
+      res.json({ message: "One of the fields is empty" });
+    }
+  } catch (err) {
+    next(err);
+  }
+});
 module.exports = router;
